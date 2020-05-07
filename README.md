@@ -6,7 +6,7 @@ This framework is using opencv and cuda 10.2
 
 1.FER_and_card_detection.py - doing card detection and facial expression recognition in the same time.
 The result will be showing you in real time in an opened window the predictions and the bounding boxes, and so on.
-One video will be generated and saved when the program is finished.(See the video prediction.avi as an example).
+One video will be generated and saved when the program is finished.(See the video prediction.avi as an example).<br>
 2. FER_card_detection_labels.py - does same thing as the one above, but instead of saving a video, it will save a text
 file with all the results during the prediction. The results are saved as states that could be used to train
 a Reinforcement Learning agent.
