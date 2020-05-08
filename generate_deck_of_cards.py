@@ -120,7 +120,7 @@ def cards_to_image(cards, removed_cards_indices, chosen_cards_indices, backgroun
 # Generate images of decks of cards, and save them to disk.
 
 
-for i in range(0, 10):
+for i in range(0, 10000):
     cards = shuffled_cards(images)
     removed_cards = cards_to_remove_indices(cards)
     chosen_cards = chosen_cards_indices(cards)
