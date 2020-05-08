@@ -1,8 +1,6 @@
 # Visual-perception-for-an-Interactive-Robot-playing-Card-Games
 Implementation of different deep learning techniques in the scenario of learning a robot to play card games.
 
-The dll files are files that are needed for darknet framework to work.
-This framework is using opencv and cuda 10.2
 
 1.FER_and_card_detection.py - doing card detection and facial expression recognition in the same time.
 The result will be showing you in real time in an opened window the predictions and the bounding boxes, and so on.
@@ -23,5 +21,7 @@ of each card.<br>
 9.darknet.py - the library used.
 10. split_data.py - Split the generated images of decks into train and test dataset for YOLO
 
+The dll files are files that are needed for darknet framework to work.
+This framework is using opencv and cuda 10.2
 If you want to modify the detection model to detect other types of objects, you can follow this link:
 https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
