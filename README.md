@@ -1,4 +1,4 @@
-# Visual-perception-for-an-Interactive-Robot-playing-Card-Games
+# Visual perception for an Interactive Robot playing Card Games
 Implementation of different deep learning techniques in the scenario of learning a robot to play card games.
 
 
