@@ -11,6 +11,7 @@ from PIL import Image, ImageEnhance
 images = ["Big_Ben", "Bradenburg_Gate", "Colosseo", "Duomo", "Eiffel", "Saint_Basil_Cathedral",
           "Statue_of_liberty", "Sagrada_familia"]
 
+background_images = ["Background 1.jpeg", "Background 2.jpeg", "Background 3.jpeg", "Background 4.jpeg", "Background 5.jpeg", "Background 6.jpeg", "Background 9.jpeg", "Background 10.jpeg", "Background 11.jpeg"]
 
 def shuffled_cards(images, m=4, n=4):
     """
@@ -72,19 +73,19 @@ def brightness(table):
     """
     Apply brightness to the image
     """
-    value = random.uniform(0.95, 1.1)
+    value = random.uniform(0.8, 1.2)
     contrast = ImageEnhance.Brightness(table)
     contrast = contrast.enhance(value)
     return contrast
 
 
-def cards_to_image(cards, removed_cards_indices, chosen_cards_indices):
+def cards_to_image(cards, removed_cards_indices, chosen_cards_indices, background_image):
     """
     Save the generated deck into an image.
     Find and save the corresponding bounding boxes of cards into txt files, using YOLO format.
     """
     images_path = "Images\\"
-    table_image = Image.open(images_path + "Background 11.jpeg")
+    table_image = Image.open(images_path + background_image)
     table_height, table_width = table_image.size
     chosen_card_1, chosen_card_2 = chosen_cards_indices[0], chosen_cards_indices[1]
     labels = ""
@@ -117,12 +118,15 @@ def cards_to_image(cards, removed_cards_indices, chosen_cards_indices):
 
 
 # Generate images of decks of cards, and save them to disk.
-for i in range(0, 10000):
+
+
+for i in range(0, 10):
     cards = shuffled_cards(images)
     removed_cards = cards_to_remove_indices(cards)
     chosen_cards = chosen_cards_indices(cards)
     save_directory = "dataset_table_cards\\images\\"
-    final_deck, labels_of_deck = cards_to_image(cards, removed_cards, chosen_cards)
+    final_deck, labels_of_deck = cards_to_image(cards, removed_cards, chosen_cards, background_images[0])
     final_deck.save(save_directory + "image_" + str(i) + ".jpg")
     f = open("dataset_table_cards\\labels\\image_" + str(i) + ".txt", "w")
     f.write(labels_of_deck)
+    f.close()
