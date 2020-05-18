@@ -18,7 +18,7 @@ facial expression.<br>
 of decks of cards together with corresponding bounding boxes saved in text files.(See folder: dataset_table_cards).<br>
 8.generate_individual_cards.py - create a dataset of individual cards, used for creating a model to predict the classes
 of each card.<br>
-9.darknet.py - the library used.
+9.darknet.py - the library used.<br>
 10. split_data.py - Split the generated images of decks into train and test dataset for YOLO
 
 The dll files are files that are needed for darknet framework to work.
