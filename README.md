@@ -1,7 +1,7 @@
 # Visual perception for an Interactive Robot playing Card Games
 Implementation of different deep learning techniques in the scenario of learning a robot to play card games.
 
-<b>To see a demo check the files: video cam_video.avi and image1_prediction.jpg.<br>
+<b>To see a demo check the files: cam_video.avi and image1_prediction.jpg.<br>
 To see the saved results check the file: FER_card_detection_labels.txt</b>
 
 
