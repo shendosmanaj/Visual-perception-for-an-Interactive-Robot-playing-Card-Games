@@ -23,8 +23,3 @@ of decks of cards together with corresponding bounding boxes saved in text files
 of each card.<br>
 9.darknet.py - the library used.<br>
 10. split_data.py - Split the generated images of decks into train and test dataset for YOLO
-
-The dll files are files that are needed for darknet framework to work.
-This framework is using opencv and cuda 10.2
-If you want to modify the detection model to detect other types of objects, you can follow this link:
-https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
