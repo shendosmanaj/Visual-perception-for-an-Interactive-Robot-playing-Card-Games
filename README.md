@@ -5,7 +5,7 @@ An image with predictions made by robot in real time: <br>
 ![image1_prediction](https://github.com/shend5/Visual-perception-for-an-Interactive-Robot-playing-Card-Games/blob/master/image1_prediction.jpg)
 
 <br>
-A gif with predictions taken from a video. Predictions are made at 15 FPS.
+A gif with predictions taken from a video. Predictions are made at 15 FPS.<br>
 ![github](https://media.giphy.com/media/Z9nZuWLZ68haS6TGM3/giphy.gif)
 
 
