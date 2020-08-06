@@ -2,7 +2,7 @@
 Implementation of different deep learning techniques in the scenario of learning a robot to play card games.
 
 An image with predictions made by robot in real time:
-![image1_prediction](https://github.com/shend5/Visual-perception-for-an-Interactive-Robot-playing-Card Games/blob/master/image1_prediction.jpg)
+![image1_prediction](https://github.com/shend5/Visual-perception-for-an-Interactive-Robot-playing-Card-Games/blob/master/image1_prediction.jpg)
 
 A gif with predictions taken from a video. Predictions are made at 15 FPS.
 ![github](https://media.giphy.com/media/Z9nZuWLZ68haS6TGM3/giphy.gif)
