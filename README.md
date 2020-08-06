@@ -6,7 +6,7 @@ An image with predictions made by robot in real time: <br>
 
 <br>
 A gif with predictions taken from a video. Predictions are made at 15 FPS.<br>
-!(img)[https://media.giphy.com/media/Z9nZuWLZ68haS6TGM3/giphy.gif]
+![gif](https://imgur.com/gallery/cReVpwN)
 
 
 1.FER_and_card_detection.py - doing card detection and facial expression recognition in the same time.
