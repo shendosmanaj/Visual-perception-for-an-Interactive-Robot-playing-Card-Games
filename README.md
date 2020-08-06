@@ -1,8 +1,12 @@
 # Visual perception for an Interactive Robot playing Card Games
 Implementation of different deep learning techniques in the scenario of learning a robot to play card games.
 
-<b>To see a demo check the files: cam_video.avi and image1_prediction.jpg.<br>
-To see the saved results check the file: FER_card_detection_labels.txt</b>
+An image with predictions made by robot in real time:
+
+❮img src="https://github.com/shend5/Visual-perception-for-an-Interactive-Robot-playing-Card-Games/blob/master/image1_prediction.jpg"❯
+
+A gif with predictions taken from a video. Predictions are made at 15 FPS.
+![github](https://imgur.com/a/cReVpwN)
 
 
 1.FER_and_card_detection.py - doing card detection and facial expression recognition in the same time.
