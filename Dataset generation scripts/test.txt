@@ -1,0 +1,10 @@
+D:\darknet\darknet\build\darknet\x64\data\obj\image_17.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_26.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_35.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_44.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_53.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_62.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_71.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_80.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_9.jpg
+D:\darknet\darknet\build\darknet\x64\data\obj\image_99.jpg

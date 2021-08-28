@@ -9,6 +9,8 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 
 camera = cv2.VideoCapture(0)
+
+
 def FER():
     cascadePath = "haarcascade_frontalface_default.xml"
     detector = cv2.CascadeClassifier(cascadePath)
@@ -26,14 +28,18 @@ def FER():
 
         # detect faces in the input frame, then clone the frame so that we can
         # draw on it
-        rects = detector.detectMultiScale(gray, scaleFactor=1.1,
-                                          minNeighbors=5, minSize=(30, 30),
-                                          flags=cv2.CASCADE_SCALE_IMAGE)
+        rects = detector.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30),
+            flags=cv2.CASCADE_SCALE_IMAGE,
+        )
 
         if len(rects) > 0:
-            for(fX, fY, fW, fH) in rects:
-                roi = gray[fY: fY + fH, fX:fX + fW]
-                roi = cv2.resize(roi, (48,48))
+            for (fX, fY, fW, fH) in rects:
+                roi = gray[fY : fY + fH, fX : fX + fW]
+                roi = cv2.resize(roi, (48, 48))
                 roi = roi.astype("float") / 255.0
                 roi = img_to_array(roi)
                 roi = np.expand_dims(roi, axis=0)
@@ -50,11 +56,27 @@ def FER():
                     # draw the label + probability bar on the canvas
                     w = int(prob * 300)
 
-                    cv2.putText(frameClone,text, (fX, fY - (20 * i) - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.45,(255, 255,255), 2)
-                    cv2.putText(frameClone, label, (fX, fY - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-                    cv2.rectangle(frameClone, (fX, fY), (fX + fW, fY + fH),
-                          (0, 0, 255), 2)
+                    cv2.putText(
+                        frameClone,
+                        text,
+                        (fX, fY - (20 * i) - 25),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.45,
+                        (255, 255, 255),
+                        2,
+                    )
+                    cv2.putText(
+                        frameClone,
+                        label,
+                        (fX, fY - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.45,
+                        (0, 0, 255),
+                        2,
+                    )
+                    cv2.rectangle(
+                        frameClone, (fX, fY), (fX + fW, fY + fH), (0, 0, 255), 2
+                    )
 
         cv2.imshow("Face", frameClone)
 
@@ -67,4 +89,3 @@ def FER():
 
 if __name__ == "__main__":
     FER()
-
