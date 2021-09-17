@@ -5,8 +5,6 @@ The result is shown to the user in real time, and saved as a video.
 
 from ctypes import *
 
-# import math
-# import random
 import os
 import cv2
 import numpy as np
@@ -61,7 +59,7 @@ FER_model.compile(
 Emotion_classes = ["Angry", "Fear", "Happy", "Sad", "Surprise", "Neutral"]
 
 
-def convertBack(x, y, w, h):
+def convert_back_from_yolo(x, y, w, h):
     """Convert back from YOLO format"""
     xmin = int(round(x - (w / 2)))
     xmax = int(round(x + (w / 2)))
@@ -70,11 +68,11 @@ def convertBack(x, y, w, h):
     return xmin, ymin, xmax, ymax
 
 
-def cardsDrawBoxes(detections, img, card_model):
+def classify_cards(detections, img, card_model):
     for detection in detections:
         x, y, w, h = detection[2][0], detection[2][1], detection[2][2], detection[2][3]
 
-        xmin, ymin, xmax, ymax = convertBack(float(x), float(y), float(w), float(h))
+        xmin, ymin, xmax, ymax = convert_back_from_yolo(float(x), float(y), float(w), float(h))
         pt1 = (xmin, ymin)
         pt2 = (xmax, ymax)
 
@@ -248,7 +246,7 @@ def YOLO():
                         frame_resized, (fX, fY), (fX + fW, fY + fH), (255, 0, 0), 2
                     )
 
-        image = cardsDrawBoxes(detections, frame_resized, card_model)
+        image = classify_cards(detections, frame_resized, card_model)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
         cv2.imshow("Demo", image)
