@@ -69,9 +69,10 @@ def card_to_image(card):
     return table_image
 
 
-# Generate the images, and save them to disk.
-for i in range(0, 10000):
-    card = random_card(images)
-    card_image = card_to_image(card)
-    saved_images_path = f"individual_cards_dataset\\{card}\\Image{str(i)}.jpeg"
-    card_image.save(saved_images_path)
+if __name__ == "__main__":
+    # Generate the images, and save them to disk.
+    for i in range(0, 10000):
+        card = random_card(images)
+        card_image = card_to_image(card)
+        saved_images_path = f"individual_cards_dataset\\{card}\\Image{str(i)}.jpeg"
+        card_image.save(saved_images_path)
