@@ -153,14 +153,15 @@ def cards_to_image(cards, removed_cards_indices, chosen_cards_indices, backgroun
     return table_image, labels
 
 
-# Generate images of decks of cards, and save them to disk.
-for i in range(0, 10000):
-    cards = shuffled_cards(images)
-    removed_cards = cards_to_remove_indices(cards)
-    chosen_cards = chosen_cards_indices(cards)
-    save_directory = r"cards_on_table_dataset\images"
-    final_deck, labels_of_deck = cards_to_image(cards, removed_cards, chosen_cards, background_images[0])
-    final_deck.save(save_directory + "\image_" + str(i) + ".jpg")
+if __name__ == "__main__":
+    # Generate images of decks of cards, and save them to disk.
+    for i in range(0, 10000):
+        cards = shuffled_cards(images)
+        removed_cards = cards_to_remove_indices(cards)
+        chosen_cards = chosen_cards_indices(cards)
+        save_directory = r"cards_on_table_dataset\images"
+        final_deck, labels_of_deck = cards_to_image(cards, removed_cards, chosen_cards, background_images[0])
+        final_deck.save(save_directory + "\image_" + str(i) + ".jpg")
 
-    with open(r"cards_on_table_dataset\labels\image_" + str(i) + ".txt", "w") as labels_txt_file:
-        labels_txt_file.write(labels_of_deck)
+        with open(r"cards_on_table_dataset\labels\image_" + str(i) + ".txt", "w") as labels_txt_file:
+            labels_txt_file.write(labels_of_deck)
