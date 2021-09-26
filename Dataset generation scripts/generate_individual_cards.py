@@ -71,7 +71,7 @@ def card_to_image(card):
 
 if __name__ == "__main__":
     # Generate the images, and save them to disk.
-    for i in range(0, 10000):
+    for i in range(0, 68000):
         card = random_card(images)
         card_image = card_to_image(card)
         saved_images_path = f"individual_cards_dataset\\{card}\\Image{str(i)}.jpeg"
